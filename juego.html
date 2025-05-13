@@ -60,7 +60,7 @@
     .contenedor {
       width: 100%;
       height: 280px; 
-      position: relative;      background: linear-gradient(to bottom, #291F82, rgba(41,31,130,0.7)), url("../img/NUBES.PNG") repeat-x 0 20px;
+      position: relative;      background: linear-gradient(to bottom, #291F82, rgba(41,31,130,0.7)), url("./img/NUBES.png") repeat-x 0 20px;
       background-size: auto, 100% auto; 
       overflow: hidden;
       border-radius: 10px;
@@ -73,19 +73,19 @@
       position: absolute; 
       bottom: 22px; 
       left: 42px; 
-      z-index: 2;      background: url("../img/flor.png") repeat-x 0 0; 
+      z-index: 2;      background: url("./img/flor.png") repeat-x 0 0; 
       background-size: 336px 84px;
     }
     
     .dino-corriendo { animation: animarDino 0.25s steps(2) infinite; }
     .dino-estrellado { background-position-x: -252px; }
-    
-    .suelo {
+      .suelo {
       width: 200%; 
       height: 42px; 
       position: absolute; 
       bottom: 0; 
-      left: 0;      background: url("../img/SUELO.PNG") repeat-x 0 0; 
+      left: 0;
+      background: url("./img/SUELO.png") repeat-x 0 0; 
       background-size: 50% 42px;
     }
     
@@ -94,13 +94,13 @@
       bottom: 36px; 
       z-index: 1; 
       image-rendering: pixelated;
-    }    .objecto1 { width: 73px; height: 38px; background: url("../img/objecto1.png") no-repeat center/contain; }
-    .objecto2 { width: 155px; height: 38px; background: url("../img/objecto2.png") no-repeat center/contain; }
-    .objecto3 { width: 88px; height: 20px; background: url("../img/objecto3.png") no-repeat center/contain; }
-    .objecto4 { width: 85px; height: 66px; background: url("../img/objecto4.png") no-repeat center/contain; }
-    .objecto5 { width: 89px; height: 38px; background: url("../img/objecto5.png") no-repeat center/contain; }
-    .objecto6 { width: 85px; height: 66px; background: url("../img/objecto6.png") no-repeat center/contain; }
-    .objecto7 { width: 43px; height: 66px; background: url("../img/objecto 7.png") no-repeat center/contain; }
+    }    .objecto1 { width: 73px; height: 38px; background: url("./img/objecto1.png") no-repeat center/contain; }
+    .objecto2 { width: 155px; height: 38px; background: url("./img/objecto2.png") no-repeat center/contain; }
+    .objecto3 { width: 88px; height: 20px; background: url("./img/objecto3.png") no-repeat center/contain; }
+    .objecto4 { width: 85px; height: 66px; background: url("./img/objecto4.png") no-repeat center/contain; }
+    .objecto5 { width: 89px; height: 38px; background: url("./img/objecto5.png") no-repeat center/contain; }
+    .objecto6 { width: 85px; height: 66px; background: url("./img/objecto6.png") no-repeat center/contain; }
+    .objecto7 { width: 43px; height: 66px; background: url("./img/objecto 7.png") no-repeat center/contain; }
     
     .score {
       position: absolute; 
@@ -695,7 +695,7 @@ function crearObstaculo() {
     crearObstaculo(); // Intentar con otro obstáculo
   };
     // Manejar el caso especial del objecto 7 que tiene un espacio en el nombre
-  const imagePath = tipo === 7 ? '../img/objecto 7.png' : `../img/objecto${tipo}.png`;
+  const imagePath = tipo === 7 ? './img/objecto 7.png' : `./img/objecto${tipo}.png`;
   img.src = imagePath;
     // Aumentar la separación entre obstáculos
   tiempoHastaObstaculo = 1.2 + (Math.random() * 1.0) / gameVel;

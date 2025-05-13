@@ -618,10 +618,12 @@ function moverDino(dt) {
 
 function moverFondoYSuelo(dt) {
   const desplazamiento = velEscenario * dt * gameVel;
-  
-  sueloX = (sueloX - desplazamiento) % contenedor.clientWidth;
-  suelo.style.left = sueloX + 'px';
-  
+
+  // Mover el suelo utilizando background-position-x
+  sueloX = (sueloX - desplazamiento) % (contenedor.clientWidth / 2);
+  suelo.style.backgroundPositionX = sueloX + 'px';
+
+  // Mover el fondo del contenedor
   fondoX = (fondoX - desplazamiento * 0.5) % contenedor.clientWidth;
   contenedor.style.backgroundPositionX = fondoX + 'px';
 }

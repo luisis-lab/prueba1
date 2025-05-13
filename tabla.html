@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Top 6 Jugadores</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+    
+    * { padding: 0; margin: 0; box-sizing: border-box; }
+    
+    body { 
+      height: 100vh; 
+      background: #584040; 
+      display: flex; 
+      align-items: center; 
+      font-family: 'Press Start 2P', cursive;
+      user-select: none;
+    }
+    
+    .contenedor {
+      width: 920px; 
+      height: 520px; 
+      margin: 0 auto; 
+      position: relative;
+      background: linear-gradient(to bottom, #291F82, rgba(41,31,130,0.7));
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      padding: 20px;
+    }
+
+    .tabla-titulo {
+      color: #fff;
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 40px;
+      text-shadow: 2px 2px #000;
+    }
+
+    .tabla-scores {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 15px;
+    }
+
+    .tabla-scores th {
+      color: #d48871;
+      text-align: left;
+      padding: 10px;
+      font-size: 14px;
+      border-bottom: 2px solid #d48871;
+    }
+
+    .tabla-scores td {
+      color: #fff;
+      padding: 15px 10px;
+      font-size: 12px;
+      background: rgba(0,0,0,0.7);
+    }
+
+    .tabla-scores tr.tu-posicion td {
+      background: rgba(212, 136, 113, 0.3);
+      border: 2px solid #d48871;
+      border-left: none;
+      border-right: none;
+    }
+
+    .tabla-scores tr.tu-posicion td:first-child {
+      border-left: 2px solid #d48871;
+      border-radius: 5px 0 0 5px;
+    }
+
+    .tabla-scores tr.tu-posicion td:last-child {
+      border-right: 2px solid #d48871;
+      border-radius: 0 5px 5px 0;
+    }
+
+    .volver-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      padding: 10px 20px;
+      background: rgba(0,0,0,0.7);
+      color: #d48871;
+      text-decoration: none;
+      border-radius: 5px;
+      border: 2px solid #d48871;
+      font-size: 12px;
+      transition: all 0.3s ease;
+    }
+
+    .volver-btn:hover {
+      background: #d48871;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <a href="juego.html" class="volver-btn">← Volver</a>
+    <h1 class="tabla-titulo">Top 6 Jugadores</h1>
+    <table class="tabla-scores">
+      <thead>
+        <tr>
+          <th>Posición</th>
+          <th>Jugador</th>
+          <th>Puntos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>MasterFlower</td>
+          <td>2500</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>FlowerKing</td>
+          <td>2100</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>ChillMaster</td>
+          <td>1800</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>FloralNinja</td>
+          <td>1500</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>GardenPro</td>
+          <td>1200</td>
+        </tr>
+        <tr class="tu-posicion">
+          <td>6</td>
+          <td>Tú</td>
+          <td>950</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
